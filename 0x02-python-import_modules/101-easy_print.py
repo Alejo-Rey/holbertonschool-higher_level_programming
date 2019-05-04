@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-write("\#pythoniscool\n")
+import impor_print
