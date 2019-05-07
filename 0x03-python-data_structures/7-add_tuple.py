@@ -8,3 +8,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         return ((tuple_a[0] + tuple_b[0]), (tuple_a[1] + 0))
     if b == 0:
         return ((tuple_a[0] + 0), (tuple_a[1] + 0))
+    if a == 1:
+        return ((tuple_a[0] + tuple_b[0]), (0 + tuple_b[1]))
+    if a == 0:
+        return ((0 + tuple_b[0]), (0 + tuple_b[1]))
