@@ -1,5 +1,5 @@
-#Python - Everything is object
-##General
+# Python - Everything is object
+## General
 * Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))
 * What is an object
 * What is the difference between a class and an object or instance
