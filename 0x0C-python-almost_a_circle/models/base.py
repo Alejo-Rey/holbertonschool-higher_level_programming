@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 ''' class model Base '''
 import json
+import turtle
 
 
 class Base:
     ''' create a init file '''
+
     f = open("__init__.py", "w+")
     __nb_objects = 0
 
     def __init__(self, id=None):
-        ''' constructor '''
+        ''' constructor to instance '''
         if id is not None:
             self.id = id
         else:
@@ -45,3 +47,35 @@ class Base:
     def create(cls, **dictionary):
         ''' method to return an instance '''
         return super()
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        ''' method turtle change '''
+        for i in list_rectangles:
+            turtle.penup()
+            turtle.home()
+            turtle.color("blue")
+            turtle.setpos(i.x, i.y)
+            turtle.pendown()
+            turtle.forward(i.height)
+            turtle.left(90)
+            turtle.forward(i.width)
+            turtle.left(90)
+            turtle.forward(i.height)
+            turtle.left(90)
+            turtle.forward(i.width)
+
+        for i in list_squares:
+            turtle.penup()
+            turtle.home()
+            turtle.color("red")
+            turtle.setpos(i.x, i.y)
+            turtle.pendown()
+            turtle.forward(i.size)
+            turtle.left(90)
+            turtle.forward(i.size)
+            turtle.left(90)
+            turtle.forward(i.size)
+            turtle.left(90)
+            turtle.forward(i.size)
+        turtle.exitonclick()
