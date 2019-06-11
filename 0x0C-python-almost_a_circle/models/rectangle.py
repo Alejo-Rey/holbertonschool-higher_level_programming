@@ -104,7 +104,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         ''' method to update with args and kwargs '''
         if args:
-            l = ['id', 'size', 'x', 'y']
+            l = ['id', 'width', 'height', 'x', 'y']
             for arg in range(len(args)):
                 setattr(self, l[arg], args[arg])
         else:
