@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+B#!/usr/bin/python3
 ''' program to run mysqldb in mysql '''
 if __name__ == "__main__":
     import sys
@@ -16,6 +16,6 @@ if __name__ == "__main__":
     ORDER BY states.id")
 
     for data in cursor:
-        print(data)
+        print('{}'.format(data))
     ''' close the connection '''
     db.close()
