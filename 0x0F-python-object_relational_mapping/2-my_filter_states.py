@@ -11,9 +11,10 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          database=sys.argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = '{}'".format(sys.argv[4]))
+    cursor.execute("SELECT \
+    * FROM states WHERE name = '{}'".format(sys.argv[4]))
 
     for data in cursor:
-        print(data)
+        print('{}'.format(data))
     ''' close the connection '''
     db.close()
