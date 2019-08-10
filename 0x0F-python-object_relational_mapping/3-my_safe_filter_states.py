@@ -14,6 +14,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states WHERE name = %(id)s",  {'id': sys.argv[4]})
 
     for data in cursor:
-        print(data)
+        print('{}'.format(data))
     ''' close the connection '''
     db.close()
