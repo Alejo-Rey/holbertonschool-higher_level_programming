@@ -12,7 +12,7 @@ if __name__ == "__main__":
                          database=sys.argv[3])
     cursor = db.cursor()
     cursor.execute("SELECT \
-    * FROM states WHERE name like 'N%' \
+    * FROM states WHERE name like BINARY 'N%' \
     ORDER BY states.id")
 
     for data in cursor:
