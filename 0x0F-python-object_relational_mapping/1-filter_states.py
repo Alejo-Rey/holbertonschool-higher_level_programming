@@ -1,4 +1,4 @@
-B#!/usr/bin/python3
+#!/usr/bin/python3
 ''' program to run mysqldb in mysql '''
 if __name__ == "__main__":
     import sys
