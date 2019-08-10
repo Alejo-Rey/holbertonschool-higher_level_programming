@@ -11,7 +11,9 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          database=sys.argv[3])
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name like 'N%'")
+    cursor.execute("SELECT \
+    * FROM states WHERE name like 'N%' \
+    ORDER BY states.id")
 
     for data in cursor:
         print(data)
