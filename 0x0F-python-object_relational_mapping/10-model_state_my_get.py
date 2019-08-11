@@ -22,6 +22,6 @@ if __name__ == '__main__':
     data = session.query(State).filter(
         State.name == sys.argv[4]).one_or_none()
     if data:
-        print('{}'.format(data[0].id))
+        print('{}'.format(data.id))
     else:
         print('Not found')
