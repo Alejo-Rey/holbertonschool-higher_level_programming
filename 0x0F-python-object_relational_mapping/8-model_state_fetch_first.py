@@ -20,4 +20,7 @@ if __name__ == '__main__':
     DBSession.bind = engine
     session = DBSession()
     data = session.query(State).first()
-    print('{}: {}'.format(data.id, data.name))
+    if data:
+        print('{}: {}'.format(data.id, data.name))
+    else:
+        print("Nothing")
