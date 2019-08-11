@@ -8,7 +8,7 @@ from sqlalchemy import Table, Column
 from sqlalchemy.orm import sessionmaker
 
 
-if  __name__ == '__main__':
+if __name__ == '__main__':
     ''' Create the engine '''
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(sys.argv[1],
@@ -22,5 +22,3 @@ if  __name__ == '__main__':
     session = DBSession()
     for data in session.query(State).all():
         print('{}: {}'.format(data.id, data.name))
-    
-    
