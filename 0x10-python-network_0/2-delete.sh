@@ -1,3 +1,3 @@
 #!/bin/bash
 # scrip to get the the delete header
-curl -sL "$1"
+curl -sX "DELETE" "$1"
