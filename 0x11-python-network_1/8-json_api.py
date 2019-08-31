@@ -14,6 +14,6 @@ try:
     if (len(req.json()) == 0):
         print('No result')
     else:
-        print('[{}] <{}>'.format(req.json().get('id'), req.json().get('name')))
+        print('[{}] {}'.format(req.json().get('id'), req.json().get('name')))
 except:
         print('Not a valid JSON')
