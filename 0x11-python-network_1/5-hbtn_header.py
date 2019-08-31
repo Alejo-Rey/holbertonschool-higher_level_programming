@@ -4,4 +4,4 @@
 import requests
 
 req = requests.get('https://intranet.hbtn.io/status')
-print("{}".format(req.headers['X-Request-Id']))
+print("{}".format(req.headers.get('X-Request-Id')))
