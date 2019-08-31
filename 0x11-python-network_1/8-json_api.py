@@ -16,4 +16,4 @@ try:
     else:
         print('[{}] <{}>'.format(req.json().get('id'), req.json().get('name')))
 except:
-        pass
+        print('Not a valid JSON')
