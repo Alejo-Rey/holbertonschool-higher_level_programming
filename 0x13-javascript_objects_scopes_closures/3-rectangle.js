@@ -10,8 +10,8 @@ class Rectangle {
   }
 
   print () {
-    var x;
-    var row = '';
+    let x;
+    let row = '';
     for (x = 0; x < this.width; x++) {
       row += 'X';
     }
