@@ -2,7 +2,7 @@
 
 const req = require('request');
 
-req('http://swapi.co/api/films/', function (err, res, body) {
+req(process.argv[2], function (err, res, body) {
   if (err) {
     console.log(err);
   }
