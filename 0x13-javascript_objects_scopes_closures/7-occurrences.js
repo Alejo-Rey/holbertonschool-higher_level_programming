@@ -1,10 +1,12 @@
 #!/usr/bin/node
-/* function to export a class */
-const Rectangle = require('./4-rectangle');
+/* function to count the number of occurences */
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
+exports.nbOccurences = function (list, searchElement) {
+  let x; let count = 0;
+  for (x = 0; x < list.length; x++) {
+    if (list[x] === searchElement) {
+      count++;
+    }
   }
-}
-module.exports = Square;
+  return count;
+};
