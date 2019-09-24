@@ -9,7 +9,7 @@ class Square extends Square2 {
       let x;
       let row = '';
       for (x = 0; x <= this.height; x++) {
-        row += 'C';
+        row += c;
       }
       for (x = 0; x <= this.height; x++) {
         console.log(row);
