@@ -1,10 +1,8 @@
 #!/usr/bin/node
-/* function to export a class */
-const Rectangle = require('./4-rectangle');
+/* function to print the new argument value */
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-}
-module.exports = Square;
+let count = 0;
+
+exports.logMe = function (item) {
+  console.log(count++ + ': ' + item);
+};
