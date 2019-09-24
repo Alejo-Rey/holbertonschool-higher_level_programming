@@ -1,10 +1,8 @@
 #!/usr/bin/node
-/* function to export a class */
-const Rectangle = require('./4-rectangle');
+/* function to convert to any base */
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-}
-module.exports = Square;
+exports.converter = function (base) {
+  return function (name) {
+    return name.toString(base);
+  };
+};
