@@ -1,10 +1,11 @@
 #!/usr/bin/node
-/* function to export a class */
-const Rectangle = require('./4-rectangle');
+/* function to multiply an array items for its index */
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
+const list = require('./100-data').list;
+
+const newList = list.map(multiply);
+console.log(list);
+console.log(newList);
+function multiply (value, index) {
+  return value * index;
 }
-module.exports = Square;
