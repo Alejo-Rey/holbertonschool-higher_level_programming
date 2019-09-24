@@ -1,10 +1,20 @@
 #!/usr/bin/node
-/* function to export a class */
-const Rectangle = require('./4-rectangle');
+/* function to sort for values of the dictionary */
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
+const list = require('./101-data').dict;
+
+const list1 = []; const dict2 = {};
+
+for (const x in list) {
+  list1.push(x);
+  dict2[list[x]] = [];
+}
+
+for (const x in list1) {
+  for (const y in dict2) {
+    if (list[list1[x]].toString() === y) {
+      dict2[y].push(list1[x]);
+    }
   }
 }
-module.exports = Square;
+console.log(dict2);
