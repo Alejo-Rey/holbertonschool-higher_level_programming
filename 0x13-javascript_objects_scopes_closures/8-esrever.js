@@ -1,10 +1,10 @@
 #!/usr/bin/node
-/* function to export a class */
-const Rectangle = require('./4-rectangle');
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
+/* function to revers a list */
+exports.esrever = function (list) {
+  const newList = [];
+  let x;
+  for (x = list.length - 1; x >= 0; x--) {
+    newList.push(list[x]);
   }
-}
-module.exports = Square;
+  return newList;
+};
